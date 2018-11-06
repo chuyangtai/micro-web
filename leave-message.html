@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>给医生留言</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="./plugin/jquery.js"></script>
+</head>
+<body class="leave-message">
+<div class="tit">1.哪里不舒服，多长时间了？</div>
+<div class="content">
+    <textarea></textarea>
+</div>
+<div class="tit">2.已在哪里看过病，吃过哪些药，做过哪些检查？</div>
+<div class="content">
+    <textarea></textarea>
+</div>
+
+<div class="tit">3.以前生过什么大病，有没有住过院，动过手术？</div>
+<div class="content">
+    <textarea></textarea>
+</div>
+<div class="tit">4.以前有什么药物过敏，有什么药物不能用？</div>
+<div class="content">
+    <textarea></textarea>
+</div>
+<div class="tit">我还要告诉医生的事：</div>
+<div class="content mb80">
+    <textarea></textarea>
+</div>
+<div class="footer-nav">
+    <button class="btn btn-default" onclick="submitMessage()">提交</button>
+</div>
+
+
+</body>
+</html>
+<script>
+function submitMessage() {
+   var message=$("textarea").eq(0).val();
+
+}
+</script>

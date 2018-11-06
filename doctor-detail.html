@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>医生服务评价</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="plugin/jquery.js"></script>
+</head>
+<body class="doctor-detail" style="height: 100%">
+<div class="pop-bg" onclick="closePop(event)">
+
+</div>
+<div class="pop-content">
+    <div class="font-main">长按保存二维码</div>
+    <img src="./imgs/qr_cord.png" alt="" class="mb10 qrcode-img">
+    <div class="font-sub">可通过二维码随时访问医生主页</div>
+    <img class="close" src="./imgs/ic_close.png" alt="" width="14px" height="14px" onclick="closePop(event)">
+</div>
+<div class="display-flex evaluate-tit align-items-center justify-content-space-between"
+     style="background: url(imgs/img_ys_bg@3x.png)no-repeat center">
+    <div class="display-flex">
+        <div>
+            <img src="imgs/img_mrtx@3x.png" alt="" width="70px">
+        </div>
+        <div>
+            <div class="fs18">曹丁贵</div>
+            <div>主任医师 心脏大血管外科专业</div>
+            <div class="visit-num">访客<span>（40）</span></div>
+        </div>
+    </div>
+    <div class="qrcode" onclick="popCode()"><img src="./imgs/img_qrcode.png" alt="" width="60px"></div>
+</div>
+<div class="card">
+    <div class="card-head">技术专长</div>
+    <div class="card-body lh24 color-666">呼吸内科副主任医师。2002年主任医师。2002年毕业于蚌埠呼吸内科副师。2002年毕业于蚌埠.34</div>
+</div>
+<div class="card">
+    <div class="card-head">工作经历</div>
+    <div class="card-body lh24 color-666">有扎实的呼吸内科学知识、对呼吸内科常见病有扎实的呼吸内科学知识、对呼吸内科常见病有扎实的呼吸内科学知识、对呼吸内科常见病</div>
+</div>
+<div class="card">
+    <div class="card-head">看诊排班</div>
+    <div class="card-body lh24 color-666">
+        <ul class="scheduling">
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p class="font-main">08-01 周四 (上午)</p>
+                    <p class="lh24">[敔]呼吸内科-专家</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p class="font-main">08-01 周四 (上午)</p>
+                    <p class="lh24">[敔]呼吸内科-专家</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p class="font-main">08-01 周四 (上午)</p>
+                    <p class="lh24">[敔]呼吸内科-专家</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p class="font-main">08-01 周四 (上午)</p>
+                    <p class="lh24">[敔]呼吸内科-专家</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p class="font-main">08-01 周四 (上午)</p>
+                    <p class="lh24">[敔]呼吸内科-专家</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p>08-02 周四 (上午)</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+            <li class="display-flex align-items-center justify-content-space-between">
+                <div>
+                    <p>08-02 周四 (上午)</p>
+                </div>
+                <div>
+                    <button class="btn btn-blue">预约</button>
+                </div>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="card">
+    <div class="card-head">近一年大数据</div>
+    <div class="card-body">
+        <table class="big-data" width="100%">
+            <tr>
+                <th></th>
+                <th align="center">日均<br/>就诊次数</th>
+                <th align="center">均次<br/>费用</th>
+                <th align="center" valign="top">满意度</th>
+            </tr>
+            <tr class="active">
+                <td width="150"><img src="imgs/ic_ysxm@3x.png" alt="">曹丁贵</td>
+                <td align="center">7.48</td>
+                <td align="center">128.69</td>
+                <td align="center">-</td>
+            </tr>
+            <tr>
+                <td width="150"><img src="imgs/ic_ksmc@3x.png" alt="">消化科门诊</td>
+                <td align="center">7.48</td>
+                <td align="center">128.69</td>
+                <td align="center">90%</td>
+            </tr>
+            <tr>
+                <td width="150"><img src="imgs/ic_yymc@3x.png" alt="">金湖县中医院</td>
+                <td align="center">7.48</td>
+                <td align="center">128.69</td>
+                <td align="center">90%</td>
+            </tr>
+            <tr>
+                <td width="150"><img src="imgs/ic_qymc@3x.png" alt="">金湖县</td>
+                <td align="center">7.48</td>
+                <td align="center">128.69</td>
+                <td align="center">90%</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="evaluate">
+    <div class="card-head">近一年服务评价</div>
+    <div class="card-body">
+        <div class="evaluate-tag">
+            <div class="tag active">全部(12)</div>
+            <div class="tag">非常满意(12)</div>
+            <div class="tag">满意(0)</div>
+            <div class="tag">一般满意(0)</div>
+            <div class="tag">不满意(0)</div>
+        </div>
+
+        <div class="evaluate-text">
+            <ul>
+                <li>
+                    <div class="display-flex justify-content-space-between tit">
+                        <div class="color-999">患者 张**&nbsp;&nbsp;<span class="stars"><img src="imgs/ic_star@3x.png"
+                                                                                          alt=""><img
+                                src="imgs/ic_star@3x.png" alt=""></span></div>
+                        <div class="color-999">2018-07-22</div>
+                    </div>
+                    <div class="content">
+                        我是评价，我是评价我是评价我是评价我是评价我是评价我是评价！！
+                    </div>
+                </li>
+                <li>
+                    <div class="display-flex justify-content-space-between tit">
+                        <div class="color-999">患者 张**&nbsp;&nbsp;<span class="stars"><img src="imgs/ic_star@3x.png"
+                                                                                          alt=""><img
+                                src="imgs/ic_star@3x.png" alt=""></span></div>
+                        <div class="color-999">2018-07-22</div>
+                    </div>
+                    <div class="content">
+                        我是评价，我是评价我是评价我是评价我是评价我是评价我是评价！！
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+<div class="go-register footer-nav">
+    <button class="btn btn-default">去挂号</button>
+</div>
+</html>
+<script>
+    /*打开遮罩层*/
+    function popCode() {
+        $('body').css({
+            overflow: 'hidden'
+        });
+        $('.pop-bg').show();
+        $('.pop-content').show();
+    }
+
+    /*关闭遮罩层*/
+    function closePop(event) {
+        var e = window.event || event;
+        e.stopPropagation();
+        e.preventDefault;
+        $('body').css({
+            overflow: 'auto'
+        });
+        $('.pop-content').unbind('click')
+        $('.pop-bg').hide();
+        $('.pop-content').hide();
+    }
+
+</script>

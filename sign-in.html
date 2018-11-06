@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>注册</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="plugin/jquery.js"></script>
+</head>
+<body class="sign-in">
+<div class="pop"></div>
+<div class="tit">智慧医疗注册账号</div>
+<form name="sign-in">
+    <div><label for="idCardNum"><span class="color-red">*</span>&nbsp;身份证号</label><input error-message="身份证号 " placeholder="请输入身份证号" reg="(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)" require="required" type="text" id="idCardNum" onfocus="isShow(this)" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+    <div><label for="name"><span class="color-red">*</span>&nbsp;真实姓名</label><input error-message="真实姓名 " require="required" type="text" placeholder="请输入真实姓名" id="name" onfocus="isShow(this)" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+    <div><label for="phone"><span class="color-red">*</span>&nbsp;手机号码</label><input error-message="手机号码 " placeholder="请输入11位手机号码" reg="^1[34578]\d{9}$" require="required" type="number" id="phone" onfocus="isShow(this)" name="phone" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+    <div><label for="vcode"><span class="color-red">*</span>&nbsp;验&nbsp;证&nbsp;码&nbsp;</label><input error-message="验证码 " require="required" type="text" id="vcode" onfocus="isShow(this)"><div class="code" onclick="countTime(this)">获取验证码</div><span></span></div>
+    <div><label for="address">家庭住址</label><input type="text" id="address" onfocus="isShow(this)" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+    <div><label for="tel">固定电话</label><input type="text" id="tel" onfocus="isShow(this)" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+    <div class="login-button">
+        <span class="required-tips">请填写必填项</span>
+        <button type="button" onclick="signIn()" style="background: url(./imgs/btn_dl@3x.png)no-repeat center top;background-size:100% auto;">注册
+    </button>
+    </div>
+</form>
+
+</body>
+</html>
+<script>
+    /*注册验证*/
+    function signIn() {
+        var errorMessage='';
+        $('form').find('input').each(function (i,item) {
+            if($(item).attr('require')=='required'){
+                //非空验证
+                if($(item).val()===''){
+                    $(item).addClass('error');
+                    errorMessage=$(item).attr('error-message')+'必填';
+                    $('.required-tips').text(errorMessage);
+                    $('.required-tips').show();
+                    return false;
+                }else{
+                    //填写不符合条件
+                    var a=$(item).attr('reg');
+                    var reg=new RegExp(a,'');
+                    if(reg){
+                        //console.log($(item).attr('error-message'))
+                        if(!reg.test($(item).val())){
+                            errorMessage=errorMessage+$(item).attr('error-message');
+                            //console.log(errorMessage)
+                            $(item).addClass('error');
+                            $('.required-tips').text(errorMessage+'填写有误');
+                            $('.required-tips').show();
+                            return false;
+                        }
+                    }
+
+                }
+            }
+
+        })
+
+
+    }
+
+    /*清空输入框按钮*/
+    function clearVal(elem) {
+        $(elem).prev().val('');
+        $(elem).prev().focus();
+    }
+    /*获得焦点*/
+    function isShow(elem) {
+        $(elem).next('img').show();
+        $(elem).removeClass('error');
+        $('.required-tips').hide();
+    }
+    /*失去焦点*/
+    function isHide(elem) {
+        if($(elem).val()==''){
+            $(elem).next().hide();
+        }
+    }
+
+    /*验证码60s倒计时*/
+    function countTime(elem) {
+        //判断手机号是否正确
+        var phoneIsRight=new RegExp($('form input[name="phone"]').attr('reg')).test($('form input[name="phone"]').val());
+        if(!phoneIsRight){
+            $('form input[name="phone"]').addClass('error');
+            $('.required-tips').text('获取验证码失败，手机号填写有误');
+            $('.required-tips').show();
+            return false;
+        }
+        //发送成功弹出
+        $('.pop').text('已向'+$('form input[name="phone"]').val().substring(0,3)+'*****'+$('form input[name="phone"]').val().substring(8,11)+'发送验证码!');
+        $('.pop').fadeIn();
+        setTimeout(function () {
+            $('.pop').fadeOut();
+        },1000)
+        var t = 60;
+        var continer=$(elem).next();
+        $(elem).hide();
+        continer.show();
+        continer.text( t + 's');
+        var timer = setInterval(function () {
+            t -= 1;
+            continer.text( t + 's');
+            if (t <= 0) {
+                clearInterval(timer);
+                $(elem).show();
+                continer.hide();
+                return;
+            }
+        }, 1000);
+    }
+
+
+</script>

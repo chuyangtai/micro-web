@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>名医-名科</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="plugin/jquery.js"></script>
+    <link rel="stylesheet" href="plugin/swiper-3.4.2.min.css">
+    <script src="plugin/swiper-3.4.2.min.js"></script>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+<div>
+    <div class="search">
+        <div class="display-flex align-items-center">
+            <input type="search" placeholder="请输入医生姓名、科室、医生专长关键字" onkeypress="searchHosList()">
+            <div onclick="searchHosList()" style="padding:5px 0 5px 10px">
+                <img src="./imgs/ic_ss@3x.png" alt="" width="18px" height="18px">
+            </div>
+        </div>
+    </div>
+
+<div class="swiper-container" style="height:178px">
+    <div class="tab-nav display-flex">
+        <div class="flex-1 tab active"><span>名医</span></div>
+        <div class="flex-1 tab"><span>名科</span></div>
+    </div>
+    <div class="swiper-wrapper ">
+        <div class="swiper-slide" >
+                <div class="tab-nav1 display-flex" >
+                    <div class="flex-1">
+                        <span><img class="doctor-img" src="./imgs/ic_my_shengji@3x.png" alt="" ></span>
+                        <p class="doctor-ziti3">&nbsp;&nbsp;省级名医、名中医</p>
+                    </div>
+                     <div class="flex-1">
+                        <span><img class="doctor-img" src="./imgs/ic_my_shiji@3x.png" alt="" ></span>
+                        <p class="doctor-ziti3" >&nbsp;&nbsp;市级名医、名中医</p>
+                    </div>
+                    <div class="flex-1">
+                        <span><img class="doctor-img" src="./imgs/ic_ccr@3x.png" alt="" ></span>
+                        <p class="doctor-ziti3" >非物质文化遗传传承人</p>
+                    </div>
+                </div>
+        </div>
+        <div class="swiper-slide">
+                <div class=" tab-nav1 display-flex" >
+                    <div class="flex-1">
+                        <span><img class="doctor-img" src="./imgs/ic_mk_guojia@3x.png" alt="" ></span>
+                        <p class="doctor-ziti3">国家级<br>重点专科</p>
+                    </div>
+                    <div class="flex-1">
+                        <span><img class="doctor-img" src="./imgs/ic_mk_shengji@3x.png" alt="" ></span>
+                        <p class="doctor-ziti3" >&nbsp;&nbsp;省级重点、特色专科</p>
+                    </div>
+                    <div class="flex-1">
+                        <span><img class="doctor-img" src="./imgs/ic_mk_shiji@3x.png" alt="" ></span>
+                        <p class="doctor-ziti3" >&nbsp;&nbsp;市级重点、<br>特色专科</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+    <div class="display-flex justify-content-space-between align-items-center quick-register">
+        <div>请选择挂号医院</div>
+    </div>
+    <ul class="hospital-list">
+        <li>
+            <div class="display-flex justify-content-space-between"
+                 onclick="window.location.href='chose-department.html'">
+                <div class="display-flex">
+                    <div>
+                        <img src="imgs/img_mrt@3x.png" alt="医院照片" width="72px" height="54px">
+                    </div>
+                    <div class="list-tit">
+                        <p>江阴市人民医院</p>
+                    </div>
+                </div>
+                <div class="list-arrow">
+                    <img src="imgs/icon-right.png" alt="" width="9px">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="display-flex justify-content-space-between"
+                 onclick="window.location.href='register-detail.html'">
+                <div class="display-flex">
+                    <div>
+                        <img src="imgs/img_mrt@3x.png" alt="医院照片" width="72px" height="54px">
+                    </div>
+                    <div class="list-tit">
+                        <p>江阴市中医院</p>
+
+                    </div>
+                </div>
+                <div class="list-arrow">
+                    <img src="imgs/icon-right.png" alt="" width="9px">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="display-flex justify-content-space-between"
+                 onclick="window.location.href='register-detail.html'">
+                <div class="display-flex">
+                    <div>
+                        <img src="imgs/img_mrt@3x.png" alt="医院照片" width="72px" height="54px">
+                    </div>
+                    <div class="list-tit">
+                        <p>江阴市第五人民医院</p>
+
+                    </div>
+                </div>
+                <div class="list-arrow">
+                    <img src="imgs/icon-right.png" alt="" width="9px">
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="tab-nav2 display-flex">
+        <div class="doctor-ziti4 flex-1">
+              江阴市卫生和计划生育委员会@版权所有<br>
+              技术支持：浙江和仁科技股份有限公司
+        </div>
+    </div>
+
+    <div class="footer-nav display-flex align-items-center justify-content-center">
+         <div class="index flex-1 active" style="color: grey;">首页</div>
+         <div class="self-test flex-1">健康自测</div>
+    <div class="my flex-1">我</div>
+</div>
+</body>
+</html>
+<script>
+    function searchHosList() {
+        var searchName = $("#searchHos").val();
+    }
+</script>
+<script>
+    // Swiper切换
+    $(function() {
+        //拖动切换
+        var mySwiper = new Swiper('.swiper-container', {
+            onSlideChangeEnd: function(swiper) {
+                var n = swiper.activeIndex;
+                $('.tab').removeClass('active').eq(n).addClass('active');
+            }
+
+        })
+        /*列表切换*/
+        $('.tab').each(function() {
+            $(this).click(function(e) {
+                e.preventDefault();
+                var i = $(this).index();
+                $('.tab').removeClass('active');
+                $('.tab').eq(i).addClass('active');
+                mySwiper.slideTo(i, 300, false);
+            })
+        })
+    });
+</script>
+

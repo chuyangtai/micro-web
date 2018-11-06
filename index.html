@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>智慧医疗</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="plugin/swiper-3.4.2.min.css">
+    <script src="plugin/swiper-3.4.2.min.js"></script>
+</head>
+<body>
+<div class="index-page">
+    <div class="card banner">
+        <img src="./imgs/img_banner@3x.png" alt="">
+    </div>
+    <div class="card main-content display-flex align-items-center">
+        <div class="main-content-left display-flex align-items-center justify-content-center">
+            <div onclick="window.location.href='hospital-list.html'">
+                <div class="font-main">预约挂号</div>
+                <div class="font-light">随时挂号免排队</div>
+                <div><img src="./imgs/img_yygh@3x.png" alt="" width="76px"></div>
+            </div>
+        </div>
+        <div class="flex-1 main-content-right">
+            <div class="right-top display-flex align-items-center justify-content-space-between">
+                <div onclick="window.location.href='my-register.html'">
+                    <div class="font-main">凭码就诊</div>
+                    <div class="font-light">无需再带任何就诊卡</div>
+                </div>
+                <div><img src="imgs/img_pmjz@3x.png" alt="" width="36px"></div>
+            </div>
+            <div class="right-bottom display-flex align-items-center justify-content-space-between" onclick="window.location.href='queue.html'">
+                <div>
+                    <div class="font-main">排队叫号</div>
+                    <div class="font-light">实时提醒一目了然</div>
+                </div>
+                <div><img src="imgs/img_pdjh@3x.png" alt="" width="48px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card icon-content swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="display-flex align-items-center justify-content-center">
+                    <div class="flex-1" onclick="window.location.href='my-register.html'">
+                        <img src="./imgs/ic_wdgh@3x.png" alt="">
+                        <div class="font-medium">我的预约</div>
+                    </div>
+                    <div class="flex-1">
+                        <img src="./imgs/ic_bgcx@3x.png" alt="" onclick="window.location.href='report.html'">
+                        <div class="font-medium">报告查询</div>
+                    </div>
+                    <div class="flex-1">
+                        <img src="./imgs/ic_qrqy@3x.png" alt="">
+                        <div class="font-medium">确认取药</div>
+                    </div>
+                </div>
+                <div class="display-flex align-items-center justify-content-center">
+                    <div class="flex-1" onclick="window.location.href='medical-records.html'">
+                        <img src="imgs/ic_fyqd@3x.png" alt="">
+                        <div class="font-medium">费用清单</div>
+                    </div>
+                    <div class="flex-1" onclick="window.location.href='medical-records.html'">
+                        <img src="./imgs/ic_zxzf@3x.png" alt="">
+                        <div class="font-medium">在线支付</div>
+                    </div>
+                    <div class="flex-1" onclick="window.location.href='evaluate-list.html'">
+                        <img src="./imgs/ic_fwpj@3x.png" alt="">
+                        <div class="font-medium">服务评价</div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="display-flex align-items-center justify-content-center">
+                    <div class="flex-1" onclick="window.location.href='my-register.html'">
+                        <img src="./imgs/ic_zljl@2x.png" alt="">
+                        <div class="font-medium">住院清单</div>
+                    </div>
+                    <div class="flex-1">
+
+                    </div>
+                    <div class="flex-1">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<div class="copy-right">
+    <p>江阴市卫生与计划生育委员会&#169;版权所有</p>
+    <p>技术支持:浙江和仁科技股份有限公司</p>
+</div>
+<div class="footer-nav display-flex align-items-center justify-content-center">
+    <div class="index flex-1 active">首页</div>
+    <div class="self-test flex-1">健康档案</div>
+    <div class="my flex-1">我</div>
+</div>
+
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+
+        // 如果需要分页器
+        pagination: '.swiper-pagination',
+
+        // 如果需要前进后退按钮
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    })
+</script>
+</body>
+</html>

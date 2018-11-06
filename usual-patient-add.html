@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>添加常用就诊人</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="plugin/jquery.js"></script>
+
+</head>
+<body class="usual-patient-add">
+<div class="sign-in">
+    <div class="font-main">新增常用就诊人短信验证</div>
+    <form action="" name="usual-patient-add">
+        <div><label for="idCardNum"><span class="color-red">*</span>&nbsp;身份证号</label><input error-message="身份证号 " placeholder="请输入身份证号" reg="(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)" require="required" type="text" id="idCardNum" onfocus="isShow(this)" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+        <div><label for="name"><span class="color-red">*</span>&nbsp;真实姓名</label><input error-message="真实姓名 " require="required" type="text" placeholder="请输入真实姓名" id="name" onfocus="isShow(this)" onblur="isHide(this)"><img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)"></div>
+        <div><label for="vcode"><span class="color-red">*</span>&nbsp;验&nbsp;证&nbsp;码&nbsp;</label><input error-message="验证码 " require="required" type="text" id="vcode" onfocus="isShow(this)"><div class="code" onclick="countTime(this)">获取验证码</div><span></span></div>
+
+        <div class="display-flex align-items-center">
+            <div class="color-666">&nbsp;&nbsp;&nbsp;选择关系</div>
+            <div class="select-div flex-1">
+                <select id="selectRelationship">
+                    <option value="">家人</option>
+                    <option value="">亲戚</option>
+                    <option value="">朋友</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div class="required-tips">请填写必填项</div>
+            <div class="login-button btn">
+                <button type="button" style="background: url(imgs/btn_dl_2@3x.png)no-repeat center top;background-size:100% auto;" onclick="addUsualPatient()">确认新增
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+<script>
+    /*清空输入框按钮*/
+    function clearVal(elem) {
+        $(elem).prev().val('');
+        $(elem).prev().focus();
+    }
+    /*获得焦点*/
+    function isShow(elem) {
+        $(elem).next('img').show();
+        $(elem).removeClass('error');
+        $('.required-tips').hide();
+    }
+    /*失去焦点*/
+    function isHide(elem) {
+        if($(elem).val()==''){
+            $(elem).next().hide();
+        }
+    }
+    /*添加*/
+    function addUsualPatient() {
+        var errorMessage='';
+        $('form').find('input').each(function (i,item) {
+            if($(item).attr('require')=='required'){
+
+                //非空验证
+                if($(item).val()===''){
+                    $(item).addClass('error');
+                    errorMessage=$(item).attr('error-message')+'必填';
+                    $('.required-tips').text(errorMessage);
+                    $('.required-tips').show();
+                    return false;
+                }else{
+                    //填写不符合条件
+                    var a=$(item).attr('reg');
+                    var reg=new RegExp(a,'');
+                    if(reg){
+                        console.log(errorMessage)
+                        //console.log($(item).attr('error-message'))
+                        if(!reg.test($(item).val())){
+                            errorMessage=errorMessage+$(item).attr('error-message');
+                            //console.log(errorMessage)
+                            $(item).addClass('error');
+                            $('.required-tips').text(errorMessage+'填写有误');
+                            $('.required-tips').show();
+
+                            return false;
+                        }
+                    }
+
+                }
+            }
+
+        })
+
+
+    }
+
+    /*验证码60s倒计时*/
+    function countTime(elem) {
+        setTimeout(function () {
+            $('.pop').fadeOut();
+        },1000)
+        var t = 60;
+        var continer=$(elem).next();
+        $(elem).hide();
+        continer.show();
+        continer.text( t + 's');
+        var timer = setInterval(function () {
+            t -= 1;
+            continer.text( t + 's');
+            if (t <= 0) {
+                clearInterval(timer);
+                $(elem).show();
+                continer.hide();
+                return;
+            }
+        }, 1000);
+    }
+
+</script>

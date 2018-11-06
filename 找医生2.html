@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>找医生</title>
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="./style/flex.css" rel="stylesheet"/>
+    <link href="./style/index.css" rel="stylesheet"/>
+    <script src="./plugin/jquery.js"></script>
+</head>
+<body>
+<div class="bar-tab display-flex justify-content-space-between align-items-center text-center">
+    <div class="flex-1"><span class="overflow-ellipsis-130">选择医院</span> <img src="imgs/icon_arrow_down.png" alt=""
+                                                                             width="20px"></div>
+    <div class="flex-1"><span class="overflow-ellipsis-130">选择等级</span> <img src="imgs/icon_arrow_down.png" alt=""
+                                                                             width="20px"></div>
+</div>
+<!--医生列表-->
+<div>
+    <ul class="query-list">
+        <li class="display-flex align-items-center">
+            <div>
+                <img src="./imgs/doc-unknow.png" alt="" width="60px">
+            </div>
+            <div>
+                <div class="mb10"><span class="font-main">张自强1&nbsp;</span><span class="font-sub">主任医师</span></div>
+                <div class=""><span>浙江大学附属第一医院&nbsp;</span><span class="color-blue">呼吸内科</span></div>
+                <div class="font-lighter lh24 overflow-ellipsis-100">擅长：冠心病、高血压、心功能不全的诊断和治疗,常见病...</div>
+            </div>
+        </li>
+
+        <li class="display-flex align-items-center">
+            <div>
+                <img src="./imgs/111.jpg" alt="" width="60px">
+            </div>
+            <div>
+                <div class="mb10"><span class="font-main">张自强&nbsp;</span><span class="font-sub">主任医师</span></div>
+                <div class=""><span>浙江大学附属第一医院&nbsp;</span><span class="color-blue">呼吸内科呼吸科</span></div>
+                <div class="font-lighter lh24 overflow-ellipsis-100">擅长：冠心病、高血压、心功能不全的诊断和治疗,常见病...</div>
+            </div>
+        </li>
+
+        <li class="display-flex align-items-center">
+            <div>
+                <img src="./imgs/111.jpg" alt="" width="60px">
+            </div>
+            <div>
+                <div class="mb10"><span class="font-main">张自强&nbsp;</span><span class="font-sub">主任医师</span></div>
+                <div class=""><span>浙江大学附属第一医院&nbsp;</span><span class="color-blue">呼吸内科呼吸科</span></div>
+                <div class="font-lighter lh24 overflow-ellipsis-100">擅长：冠心病、高血压、心功能不全的诊断和治疗,常见病...</div>
+            </div>
+        </li>
+        <li class="display-flex align-items-center">
+            <div>
+                <img src="./imgs/doc-unknow.png" alt="" width="60px">
+            </div>
+            <div>
+                <div class="mb10"><span class="font-main">张自强&nbsp;</span><span class="font-sub">主任医师</span></div>
+                <div class=""><span>浙江大学附属第一医院&nbsp;</span><span class="color-blue">呼吸内科</span></div>
+                <div class="font-lighter lh24 overflow-ellipsis-100">擅长：冠心病、高血压、心功能不全的诊断和治疗,常见病...</div>
+            </div>
+        </li>
+        <li class="display-flex align-items-center">
+            <div>
+                <img src="./imgs/doc-unknow.png" alt="" width="60px">
+            </div>
+            <div>
+                <div class="mb10"><span class="font-main">张自强&nbsp;</span><span class="font-sub">主任医师</span></div>
+                <div class=""><span>浙江大学附属第一医院&nbsp;</span><span class="color-blue">呼吸内科</span></div>
+                <div class="font-lighter lh24 overflow-ellipsis-100">擅长：冠心病、高血压、心功能不全的诊断和治疗,常见病...</div>
+            </div>
+        </li>
+        <li class="display-flex align-items-center">
+            <div>
+                <img src="./imgs/doc-unknow.png" alt="" width="60px">
+            </div>
+            <div>
+                <div class="mb10"><span class="font-main">张自强&nbsp;</span><span class="font-sub">主任医师</span></div>
+                <div class=""><span>浙江大学附属第一医院&nbsp;</span><span class="color-blue">呼吸内科</span></div>
+                <div class="font-lighter lh24 overflow-ellipsis-100">擅长：冠心病、高血压、心功能不全的诊断和治疗,常见病...</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--选择医生-->
+<div style="display: none" class="chose-department">
+    <div class="content display-flex">
+        <div class="list-block list-block-left" id="dept-list">
+            <ul>
+                <li>
+                    <label class="label-checkbox item-content active">
+                        <input type="radio" name="dept-radio" value="001" checked="checked">
+                        <div class="item-inner">
+                            <div class="item-title">全部</div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label class="label-checkbox item-content">
+                        <input type="radio" name="dept-radio" value="002">
+                        <div class="item-inner">
+                            <div class="item-title">上城区</div>
+                        </div>
+                    </label>
+                </li>
+                <li>
+                    <label class="label-checkbox item-content">
+                        <input type="radio" name="dept-radio" value="003">
+                        <div class="item-inner">
+                            <div class="item-title">下城区</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="list-block flex-1 list-block-right" id="sub-dept-list">
+            <ul class="active" id="dept-001">
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">医院医院医院名称医院名称</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">65.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">院医院医院名称医院名称</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医9999</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+            </ul>
+            <ul id="dept-002">
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">医院医院医院名22</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">65.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">院医院医院名称医院名称</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医9999</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+            </ul>
+            <ul id="dept-003">
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">医院医院医院333</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">65.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">院医院医院名称医院名称</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+                <li class="display-flex align-items-center justify-content-space-between">
+                    <div class="item-content" external>
+                        <div class="item-inner">
+                            <div class="item-title">中南大学湘雅医9999</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="font-light">0.1km</div>
+                        <div class="btn-tip">三级甲等</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--选择级别-->
+<div style="display: none" class="chose-level">
+    <div class="catalog">
+        <div class="font-main">医生职称</div>
+        <div class="tags">
+            <div>不限</div>
+            <div>主任医生</div>
+            <div>副主任医生</div>
+            <div>主治医生</div>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="font-main">医院等级</div>
+        <div class="tags">
+            <div>不限</div>
+            <div>三级甲等</div>
+            <div>三级乙等</div>
+            <div>二级甲等</div>
+            <div>二级乙等</div>
+        </div>
+    </div>
+    <div class="text-center">
+        <button class="btn-blue btn" onclick="choseLevel()">确 定</button>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    /*请求数据*/
+    var params={};
+    function queryList() {
+        console.log('数据查询。。。');
+        return $.ajax({
+            async: false,
+            url: url,
+            timeout: 20000,
+            data: param,
+            beforeSend: function (e, t) { },
+            success: function (res) {
+
+            },
+            complete: function (e, t) { }
+        });
+    }
+
+    /*按钮类 active-up*/
+    function tabDiv(dom, index) {
+        this.div = $('.' + dom).find('div').eq(index);
+        this.img = this.div.find('img');
+        this.index = index;
+        this.imgSrc = this.img.attr('src');
+        this.iconUpSrc = 'imgs/icon_arrow_up.png';
+        this.iconDownSrc = 'imgs/icon_arrow_down.png';
+        this.changeState = function () {
+            this.isActive = this.div.attr('class');
+            if (this.isActive.indexOf('active')==-1) {
+                this.isActive = 'active';
+                this.div.addClass(this.isActive).siblings().removeClass('active').find('img').attr('src', this.iconDownSrc);
+                this.img.attr('src', this.iconUpSrc);
+                this.toggle();
+
+            } else if (this.isActive.indexOf('active')!=-1) {
+                this.isActive = '';
+                this.div.removeClass('active');
+                this.img.attr('src', this.iconDownSrc);
+                this.hide();
+            }
+        };
+        this.hide = function () {
+            $('.chose-level').hide();
+            $('.chose-department').hide();
+        };
+        this.toggle = function () {
+            if (index == 0) {
+                $('.chose-level').hide();
+                $('.chose-department').slideDown(200);
+            } else if (index == 1) {
+                $('.chose-level').slideDown(200);
+                $('.chose-department').hide();
+            }
+        }
+        this.init();
+    }
+    tabDiv.prototype.init = function () {
+        var _this = this;
+        this.div.click(function () {
+            _this.changeState();
+        })
+    }
+    //实例化按钮类
+    var tabdiv0 = new tabDiv('bar-tab', 0);
+    var tabdiv1 = new tabDiv('bar-tab', 1);
+
+    //选择等级
+    function choseLevel() {
+        tabdiv1.changeState();
+        queryList();
+    }
+    $(function () {
+        var subDeptList = $('#sub-dept-list');
+        //选择地区
+        $('#dept-list').on('click', '.label-checkbox', function () {
+            var input = $('input', this);
+            $('#dept-list .label-checkbox').removeClass('active');
+            $(this).addClass('active');
+            var subDept = $('#dept-' + input.val());
+            if (subDept.hasClass('active')) return;
+            $('ul.active', subDeptList).removeClass('active');
+            subDept.addClass('active');
+        });
+        //选择医院
+        $('.list-block-right').find('li').click(function () {
+            $(this).addClass('active').siblings('li').removeClass('active');
+            $('.bar-tab>div span').eq(0).text($(this).find('.item-title').text());
+            $('.chose-department').hide();
+            tabdiv0.changeState();
+            queryList();
+        })
+    });
+
+    //选择等级
+    $(function () {
+        $('.tags>div').click(function () {
+            $(this).addClass('active').siblings('div').removeClass('active');
+        })
+    })
+</script>

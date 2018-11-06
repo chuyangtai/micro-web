@@ -1,0 +1,84 @@
+*{margin: 0;padding: 0;}
+p{margin: 0;}
+body{color: #2c2c2c;font-size: .75rem;}
+i.iconfont{background: inherit;}
+.fwb{font-weight: bold;}
+.mb10{margin-bottom: .5rem;}
+.fl{float: left;}
+.fr{float: right;}
+
+@font-face {
+  font-family: 'iconfont';  /* project id："181175" */
+  src: url('//at.alicdn.com/t/font_1taf0176jx4unmi.eot');
+  src: url('//at.alicdn.com/t/font_1taf0176jx4unmi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1taf0176jx4unmi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1taf0176jx4unmi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1taf0176jx4unmi.svg#iconfont') format('svg');
+}
+
+.iconfont{font-family:"iconfont"!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale}
+.icon-down:before{content: '\e611';}
+.icon-up:before{content: '\e6d5';}
+.icon-left:before{content: '\e610';}
+
+/*医生名片*/
+.content{background: #f6f6f6;}
+.doctor-top{position: relative;border-bottom: 1px solid #e1e1e1;background: #fff;}
+.doctor-top:before{content: '';position: absolute;top: .7rem;left: 1rem;display: block;width: 2.5rem;height: 2.5rem;background: url(../img/doctor.png) no-repeat;background-size: contain;}
+.doctor-base{padding: .7rem 0 .75rem 4.3rem;}
+.doctor-base p{line-height: 1.2rem;}
+.doctor-base p span:nth-child(1){font-size: 1.2rem;padding-right: 1rem;}
+.doctor-base p span:nth-child(2){color: #2f9be7;padding-left: .5rem;}
+.doctor-base .qrcode{content: '';position: absolute;top: .7rem;right: .75rem;display: block;width: 1.15rem;height: 1.15rem;background: url(../img/QRcode.png) no-repeat;background-size: contain;}
+.doctor-box{margin-top: .5rem;background: #fff;border-top: 1px solid #e1e1e1;border-bottom: 1px solid #e1e1e1;}
+.doctor-box p{line-height: 2.2rem;padding-left: .5rem;color: #777;position: relative;}
+.doctor-box p i{color: #c8c7cc;position: absolute;right: .75rem;top: .5rem;}
+.doctor-box p i.show{color: #c8c7cc;position: absolute;right: .75rem;top: .5rem;content: '\e6d5';}
+.doctor-box .detail{padding: .5rem;border-top: 1px solid #e1e1e1;}
+.detail p{line-height: 1.25rem;}
+.detail-special .detail-title{border-bottom: 1px solid #e1e1e1;border-top: 1px solid #e1e1e1;}
+.detail-title span{border-bottom: 3px solid #fff;padding-bottom: .55rem;}
+.detail-title span.active{border-color: #3ea2ee;}
+.detail-title span:nth-child(2){color: #bbb;margin-left: 1.1rem;}
+.arrange-table{width: 100%;border-collapse: collapse;table-layout: fixed;padding-right: .5rem;font-size: .6rem;}
+.arrange-table thead tr{height: 2.2rem;}
+.arrange-table tr{border-bottom: 1px solid #e1e1e1;padding: .3rem 0;height: 3.25rem;}
+.arrange-table tbody tr:last-child{border-bottom: none;}
+.arrange-table tr th{line-height: 2.2rem;font-weight: normal;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.arrange-table tr th:nth-child(1){text-align: left;padding-left: .5rem;color: #7fbcf2;}
+.arrange-table tr td:nth-child(1){border-left: .5rem solid transparent;padding-left: .2rem;}
+.arrange-table tr td{overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.arrange-table tr td.active{border-color: #e6a304;}
+.arrange-table tr td p{line-height: 1.1rem;padding: 0}
+.arrange-table .stop{background: url(../img/stop.png) no-repeat;width: 4.5rem;height: 2.75rem;background-position: center;text-align: center}
+.arrange-table .order{border: 1px solid #2f9be7;width: 4.5rem;height: 2.75rem;margin: 0 auto;text-align: center;padding-top: .25rem;border-radius: .2rem;}
+.data-table{border-collapse: separate;border-spacing: 0 .5rem ;width: 100%;table-layout: fixed;font-size: .7rem;border-top: 1px solid #e1e1e1;border-bottom: 1px solid #e1e1e1;}
+.data-table tr th{font-size: .7rem;padding: 0 .3rem 0 .5rem;text-align: center;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+.data-table tr td{padding: .3rem .3rem .3rem .5rem;text-align: center;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.data-table .doctor{padding-left: 1.5rem;background: url(../img/doctor.png) .4rem no-repeat;width: .85rem;height: .85rem;text-align: left;background-size: .85rem;}
+.data-table tr.tr-doctor td:not(:first-child){color: #3ea2ee;}
+.data-table .depart{padding-left: 1.5rem;background: url(../img/depart.png) .4rem no-repeat;width: .85rem;height: .85rem;text-align: left;background-size: .85rem;}
+.data-table .hospital{padding-left: 1.5rem;background: url(../img/hospital.png) .4rem no-repeat;width: .85rem;height: .85rem;text-align: left;background-size: .85rem;}
+.data-table .area{padding-left: 1.5rem;background: url(../img/area.png) .4rem no-repeat;width: .85rem;height: .85rem;text-align: left;background-size: .85rem;}
+.data-table tbody tr{background: #fbfbfb;line-height: 2.25rem;}
+.detail-special .all{padding: .5rem;font-weight: bold;border-top: 1px solid #e1e1e1;line-height: .75rem;}
+.comment-btn{padding: .5rem;font-size: 0;width: 100%;}
+.comment-btn li{font-size: .7rem;background: #ddfbff;padding: .4rem .5rem;border-radius: .25rem;display: inline-block;margin: 0 .5rem .5rem 0;font-weight: bold;}
+.comment-detail li{font-size: .7rem;color: #777;border-top: 1px solid #e1e1e1;padding: .5rem;}
+.comment-detail li p{margin-top: .5rem;text-align: left;line-height: 1rem;padding-left: .25rem;}
+.comment-detail li div span:nth-child(1){background: url(../img/patient.png) no-repeat;background-size: .85rem;text-align: left;width: .85rem;height: .85rem;margin: 0 .25rem;}
+
+/*QRcode*/
+.rounded-rectangle{width: 12.5rem;height: 19.25rem;margin:0 auto;border:1px solid #e1e1e1;margin-top: 2rem;border-radius: .2rem;background: #eee}
+.rounded-rectangle img{border-radius: .4rem;margin: 1.6rem .825rem;}
+.doctor-infor{width: 12.5rem;height: 4.9rem;background: #fff;border-bottom-left-radius:.2rem;border-bottom-right-radius:.2rem;position: relative;}
+.doctor-infor img{border-radius: 50%;position: absolute;top: -2.9rem;}
+.doctor-infor p:nth-child(2){position: absolute; top: 2.1rem;left: 1rem;font-weight: bold;}
+.doctor-infor p span{color: #2f9be7;padding-left: .25rem;}
+.doctor-infor p:nth-child(3){position: absolute; top: 3.35rem;left: 1rem;}
+.footer{margin: 0 auto;width: 12.5rem;margin-top: 2rem;}
+.footer p{text-align: center;color: #3ea2ee;font-size: .9rem;}
+.footer p i{color: #cccbcf;}
+.fixedtool{position: fixed;bottom: 40%;right: 0;z-index: 100;}
+.fixedtool .share{width: 2.25rem;height: 4rem;background: #3ea2ee;border-top-left-radius: .4rem;border-bottom-left-radius: .4rem;}
+.share p{color: #fff;font-size: .9rem;text-align: center;padding-top: .9rem;}

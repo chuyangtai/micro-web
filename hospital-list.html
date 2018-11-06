@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>挂号-医院列表</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="plugin/jquery.js"></script>
+</head>
+<body>
+<div>
+    <div class="search">
+        <div class="display-flex align-items-center">
+            <input type="search" placeholder="请输入医生姓名、科室、医生专长关键字" onkeypress="searchHosList()">
+            <div onclick="searchHosList()" style="padding:5px 0 5px 10px">
+                <img src="./imgs/ic_ss@3x.png" alt="" width="18px" height="18px">
+            </div>
+        </div>
+        <div class="search-tips">快速按钮：<label>名医</label><label>名科</label></div>
+    </div>
+    <div class="display-flex justify-content-space-between align-items-center quick-register">
+        <div>请选择挂号医院</div>
+        <div class="color-blue display-flex align-items-center"><img src="./imgs/ic_ksfz@3x.png" alt="" width="14px" height="14px">&nbsp;快速复诊</div>
+    </div>
+    <ul class="hospital-list">
+        <li>
+            <div class="display-flex justify-content-space-between"
+                 onclick="window.location.href='chose-department.html'">
+                <div class="display-flex">
+                    <div>
+                        <img src="imgs/img_mrt@3x.png" alt="医院照片" width="72px" height="54px">
+                    </div>
+                    <div class="list-tit">
+                        <p>江阴市第五人民医院</p>
+                        <p class="red-14">三级甲等</p>
+                    </div>
+                </div>
+                <div class="list-arrow">
+                    <img src="imgs/ic_qj@3x.png" alt="" width="9px">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="display-flex justify-content-space-between"
+                 onclick="window.location.href='register-detail.html'">
+                <div class="display-flex">
+                    <div>
+                        <img src="imgs/img_mrt@3x.png" alt="医院照片" width="72px" height="54px">
+                    </div>
+                    <div class="list-tit">
+                        <p>江阴市中医院</p>
+                        <p class="red-14">三级甲等</p>
+                    </div>
+                </div>
+                <div class="list-arrow">
+                    <img src="imgs/ic_qj@3x.png" alt="" width="9px">
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="display-flex justify-content-space-between"
+                 onclick="window.location.href='register-detail.html'">
+                <div class="display-flex">
+                    <div>
+                        <img src="imgs/img_mrt@3x.png" alt="医院照片" width="72px" height="54px">
+                    </div>
+                    <div class="list-tit">
+                        <p>江阴市人民医院</p>
+                        <p class="red-14">二级甲等</p>
+                    </div>
+                </div>
+                <div class="list-arrow">
+                    <img src="imgs/ic_qj@3x.png" alt="" width="9px">
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    function searchHosList() {
+        var searchName = $("#searchHos").val();
+    }
+</script>

@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>选择科室</title>
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="./style/flex.css" rel="stylesheet" />
+    <link href="./style/index.css" rel="stylesheet" />
+    <script src="./plugin/jquery.js"></script>
+</head>
+<body>
+    <div class="chose-department" id="index-page">
+        <div class="tit font-light">请选择江阴市人民医院科室</div>
+        <!-- 这里是页面内容区 -->
+        <div class="content display-flex">
+            <div class="list-block list-block-left" id="dept-list">
+                <ul>
+                    <li>
+                        <label class="label-checkbox item-content active">
+                            <input type="radio" name="dept-radio" value="001" checked="checked">
+                            <div class="item-inner"><div class="item-title">特色科室</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="002">
+                            <div class="item-inner"><div class="item-title">皮肤性病科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="003">
+                            <div class="item-inner"><div class="item-title">内科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="004">
+                            <div class="item-inner"><div class="item-title">妇产科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="005">
+                            <div class="item-inner"><div class="item-title">其他</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="006">
+                            <div class="item-inner"><div class="item-title">口腔科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="007">
+                            <div class="item-inner"><div class="item-title">科学影像科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="008">
+                            <div class="item-inner"><div class="item-title">外科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="009">
+                            <div class="item-inner"><div class="item-title">中医科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="010">
+                            <div class="item-inner"><div class="item-title">骨科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="011">
+                            <div class="item-inner"><div class="item-title">眼科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="011">
+                            <div class="item-inner"><div class="item-title">眼科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="011">
+                            <div class="item-inner"><div class="item-title">眼科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="011">
+                            <div class="item-inner"><div class="item-title">眼科</div></div>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="label-checkbox item-content">
+                            <input type="radio" name="dept-radio" value="011">
+                            <div class="item-inner"><div class="item-title">眼科</div></div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-block flex-1 list-block-right" id="sub-dept-list">
+                <ul class="active" id="dept-001">
+                    <li>
+                        <a class="item-content" onclick="window.location.href='register-time.html'" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">皮肤科门诊001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊心脏001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊神内001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊妇科001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊康复科001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">放射科001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">功能神外001</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊血液001</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-002">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">皮肤科门诊002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊心脏002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊神内002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊妇科002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊康复科002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">放射科002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">功能神外002</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊血液002</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-003">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">皮肤科门诊003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊心脏003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊神内003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊妇科003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊康复科003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">放射科003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">功能神外003</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊血液003</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-004">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00401">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00402">
+                            <div class="item-inner"><div class="item-title">门诊心脏004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00403">
+                            <div class="item-inner"><div class="item-title">门诊神内004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00404">
+                            <div class="item-inner"><div class="item-title">门诊妇科004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00405">
+                            <div class="item-inner"><div class="item-title">门诊康复科004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00406">
+                            <div class="item-inner"><div class="item-title">放射科004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00407">
+                            <div class="item-inner"><div class="item-title">功能神外004</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00408">
+                            <div class="item-inner"><div class="item-title">门诊血液004</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-005">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00501">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00502">
+                            <div class="item-inner"><div class="item-title">门诊心脏005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00503">
+                            <div class="item-inner"><div class="item-title">门诊神内005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00504">
+                            <div class="item-inner"><div class="item-title">门诊妇科005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00505">
+                            <div class="item-inner"><div class="item-title">门诊康复科005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00506">
+                            <div class="item-inner"><div class="item-title">放射科005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00507">
+                            <div class="item-inner"><div class="item-title">功能神外005</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio"  value="00508">
+                            <div class="item-inner"><div class="item-title">门诊血液005</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-006">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00601">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00602">
+                            <div class="item-inner"><div class="item-title">门诊心脏006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00603">
+                            <div class="item-inner"><div class="item-title">门诊神内006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00604">
+                            <div class="item-inner"><div class="item-title">门诊妇科006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00605">
+                            <div class="item-inner"><div class="item-title">门诊康复科006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00606">
+                            <div class="item-inner"><div class="item-title">放射科006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00607">
+                            <div class="item-inner"><div class="item-title">功能神外006</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00608">
+                            <div class="item-inner"><div class="item-title">门诊血液006</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-007">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00701">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00702">
+                            <div class="item-inner"><div class="item-title">门诊心脏007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00703">
+                            <div class="item-inner"><div class="item-title">门诊神内007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00704">
+                            <div class="item-inner"><div class="item-title">门诊妇科007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00705">
+                            <div class="item-inner"><div class="item-title">门诊康复科007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00706">
+                            <div class="item-inner"><div class="item-title">放射科007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00707">
+                            <div class="item-inner"><div class="item-title">功能神外007</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00708">
+                            <div class="item-inner"><div class="item-title">门诊血液007</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-008">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00801">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00802">
+                            <div class="item-inner"><div class="item-title">门诊心脏008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00803">
+                            <div class="item-inner"><div class="item-title">门诊神内008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00804">
+                            <div class="item-inner"><div class="item-title">门诊妇科008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00805">
+                            <div class="item-inner"><div class="item-title">门诊康复科008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00806">
+                            <div class="item-inner"><div class="item-title">放射科008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00807">
+                            <div class="item-inner"><div class="item-title">功能神外008</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00808">
+                            <div class="item-inner"><div class="item-title">门诊血液008</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-009">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00901">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00902">
+                            <div class="item-inner"><div class="item-title">门诊心脏009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00903">
+                            <div class="item-inner"><div class="item-title">门诊神内009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00904">
+                            <div class="item-inner"><div class="item-title">门诊妇科009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00905">
+                            <div class="item-inner"><div class="item-title">门诊康复科009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00906">
+                            <div class="item-inner"><div class="item-title">放射科009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00907">
+                            <div class="item-inner"><div class="item-title">功能神外009</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="00908">
+                            <div class="item-inner"><div class="item-title">门诊血液009</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-010">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏0010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01001">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01002">
+                            <div class="item-inner"><div class="item-title">门诊心脏010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01003">
+                            <div class="item-inner"><div class="item-title">门诊神内010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01004">
+                            <div class="item-inner"><div class="item-title">门诊妇科010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01005">
+                            <div class="item-inner"><div class="item-title">门诊康复科010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01006">
+                            <div class="item-inner"><div class="item-title">放射科010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01007">
+                            <div class="item-inner"><div class="item-title">功能神外010</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01008">
+                            <div class="item-inner"><div class="item-title">门诊血液010</div></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="dept-011">
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <div class="item-inner"><div class="item-title">门诊肾脏011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01101">
+                            <div class="item-inner"><div class="item-title">皮肤科门诊011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01102">
+                            <div class="item-inner"><div class="item-title">门诊心脏011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01103">
+                            <div class="item-inner"><div class="item-title">门诊神内011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01104">
+                            <div class="item-inner"><div class="item-title">门诊妇科011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01105">
+                            <div class="item-inner"><div class="item-title">门诊康复科011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01106">
+                            <div class="item-inner"><div class="item-title">放射科011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01107">
+                            <div class="item-inner"><div class="item-title">功能神外011</div></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item-content" href="挂号须知.html" external>
+                            <input type="radio" name="sub-dept-radio" value="01108">
+                            <div class="item-inner"><div class="item-title">门诊血液011</div></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--<script src="../lib/phs3.0.js"></script>-->
+    <script>
+        $(function () {
+            var subDeptList=$('#sub-dept-list');
+            $('#dept-list').on('click', '.label-checkbox', function () {
+                var input = $('input', this);
+                $('#dept-list .label-checkbox').removeClass('active');
+                $(this).addClass('active');
+                var subDept = $('#dept-' + input.val());
+                if (subDept.hasClass('active')) return;
+                $('ul.active', subDeptList).removeClass('active');
+                subDept.addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

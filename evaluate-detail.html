@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>满意度评价</title>
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="./style/index.css" rel="stylesheet"/>
+    <script src="plugin/jquery.js"></script>
+</head>
+<body class="evaluate-detail">
+<form id="pj-form">
+    <div class="content">
+        <div class="list-block">
+            <div class="item-text">
+                <p>
+                    <span class="color-999">就诊医院:</span>
+                    <span>浙江大学附属第一医院</span>
+                </p>
+                <p>
+                    <span class="color-999">就诊科室:</span>
+                    <span>神经内科</span>
+                </p>
+                <p>
+                    <span class="color-999">就诊医生:</span>
+                    <span>张自强(主任医师)</span>
+                </p>
+            </div>
+        </div>
+        <div class="list-block list-pingjia">
+            <div class="item-content title-content">
+                <div class="item-inner">
+                    <img src="./imgs/icon_pj.png" alt="" width="20px">&nbsp;&nbsp;您对我们此次的服务满意吗？
+                </div>
+            </div>
+            <ul class="satisfaction">
+                <li class="select-content">
+                    <label class="label-checkbox item-content">
+                        <input type="radio" name="level" datatype="*" nullmsg="请评价您对我们此次的服务满意吗？"/>
+                        <div class="item-title color-gray">非常满意</div>
+                    </label>
+                </li>
+                <li class="select-content">
+                    <label class="label-checkbox item-content">
+                        <input type="radio" name="level" datatype="*" nullmsg="请评价您对我们此次的服务满意吗？"/>
+                        <div class="item-title color-gray">基本满意</div>
+                    </label>
+                </li>
+                <li class="select-content">
+                    <label class="label-checkbox item-content">
+                        <input type="radio" name="level" datatype="*" nullmsg="请评价您对我们此次的服务满意吗？"/>
+                            <div class="item-title color-gray">一般</div>
+                    </label>
+                </li>
+                <li class="select-content">
+                    <label class="label-checkbox item-content select-bmy">
+                        <input type="radio" name="level" datatype="*" nullmsg="请评价您对我们此次的服务满意吗？"/>
+                            <div class="item-title color-gray">不满意</div>
+                    </label>
+                </li>
+            </ul>
+            <ul class="list-bmy">
+                <li class="item-content bmy-title">
+                    <div class="item-inner">
+                        <div class="item-title">如果您有什么不满意的地方，请在下面列表中选择</div>
+                    </div>
+                </li>
+                <li class="check-content">
+                    <label class="item-content label-checkbox">
+                        <input type="checkbox" name="no-satis" datatype="*" nullmsg="请选择您不满意的地方"/>
+                        <span></span>
+                        <div class="item-inner">
+                            <div class="item-title">对医疗技术不满意</div>
+                        </div>
+                    </label>
+                </li>
+                <li class="check-content">
+                    <label class="item-content label-checkbox">
+                        <input type="checkbox" name="no-satis" datatype="*" nullmsg="请选择您不满意的地方"/>
+                        <span></span>
+                        <div class="item-inner">
+                            <div class="item-title">对服务态度不满意</div>
+                        </div>
+                    </label>
+                </li>
+                <li class="check-content">
+                    <label class="item-content label-checkbox">
+                        <input type="checkbox" name="no-satis" datatype="*" nullmsg="请选择您不满意的地方"/>
+                        <span></span>
+                        <div class="item-inner">
+                            <div class="item-title">对医院环境不满意</div>
+                        </div>
+                    </label>
+                </li>
+                <li class="check-content">
+                    <label class="item-content label-checkbox">
+                        <input type="checkbox" name="no-satis" datatype="*" nullmsg="请选择您不满意的地方"/>
+                        <span></span>
+                        <div class="item-inner">
+                            <div class="item-title">收费不合理</div>
+                        </div>
+                    </label>
+                </li>
+                <li class="check-content">
+                    <label class="item-content label-checkbox">
+                        <input type="checkbox" name="no-satis" datatype="*" nullmsg="请选择您不满意的地方"/>
+                        <span></span>
+                        <div class="item-inner">
+                            <div class="item-title">对医护人员不满意</div>
+                        </div>
+                    </label>
+                </li>
+                <li class="check-content">
+                    <label class="item-content label-checkbox">
+                        <input type="checkbox" name="no-satis" datatype="*" nullmsg="请选择您不满意的地方"/>
+                        <span></span>
+                        <div class="item-inner">
+                            <div class="item-title">其他的不满意</div>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="card other-suggest">
+            <div class="card-head">意见和建议</div>
+            <div class="card-body">
+                <textarea id="otherSuggestions" placeholder="请输入您对医院或医生的宝贵建议，我们会持续关注并不断改进"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="footer-nav">
+        <button class="btn btn-default">提交</button>
+    </div>
+</form>
+
+<script>
+    $(function () {
+        // 满意程度选择
+        $(".select-content").click(function () {
+            var t = $(this);
+            t.find(".item-title").addClass("active");
+            t.siblings().find(".item-title").removeClass("active");
+            if ($(".select-bmy").find('.item-title').hasClass("active")) {
+                $(".check-content").children().find("input").removeAttr("checked");
+                $(".list-bmy").show();
+            }
+            else {
+                $(".list-bmy").hide();
+                $(".check-content").children().find("input").prop('checked', 'checked');
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

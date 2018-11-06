@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="white-bg">
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+          content="width=375,maximum-scale=3, user-scalable=no, viewport-fit=cover">
+    <title>智慧医疗</title>
+    <link rel="stylesheet" href="./style/flex.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="plugin/jquery.js"></script>
+</head>
+<body class="login">
+<div class="pop"></div>
+<div class="white-bg">
+    <div class="login-tit">输入手机号码</div>
+    <form action="" name="login">
+        <div class="username">
+            <label for="tel">手机号</label><input type="number" placeholder="请输入手机号" name="tel"
+                                               id="tel" onfocus="isShow(this)" onblur="isHide(this)">
+            <img src="./imgs/ic_delte@3x.png" alt="" width="17px" height="17px" onclick="clearVal(this)">
+        </div>
+        <div class="password">
+            <label for="password">验证码</label> <input type="number" placeholder="请输入短信验证码" name="password" id="password">
+            <div class="code" onclick="countTime(this)">获取验证码</div>
+            <span></span>
+        </div>
+        <div class="font-light mt20">
+            请选择身份证：
+        </div>
+        <div class="select-div">
+            <select id="select-idnum">
+                <option value="321345677898789877">321345677898789877</option>
+                <option value="321345677898789877">321345677898784557</option>
+            </select>
+        </div>
+        <div class="login-button">
+            <button style="background: url(imgs/btn_dl@3x.png)no-repeat center top;background-size:100% auto;">登录
+            </button>
+        </div>
+    </form>
+    <div class="login-else display-flex justify-content-space-between align-items-center">
+        <div class="chose-cookie display-flex align-items-center">
+         <input type="checkbox" id="auto"><span></span><label for="auto">&nbsp;下次自动登录</label>
+        </div>
+        <a onclick="window.location.href='sign-in.html'">注册账号</a>
+    </div>
+    <div class="tips">
+        <div class="font-light">温馨提示：非签约居民可以注册并预约挂号，但是没有支付和先看病后付费功能，建议现场签约医保在线支付协议。</div>
+    </div>
+   </div>
+</body>
+</html>
+<script>
+    /*清空输入框按钮*/
+    function clearVal(elem) {
+        $(elem).prev().val('');
+        $(elem).prev().focus();
+    }
+    function isShow(elem) {
+       $(elem).next().show();
+    }
+    function isHide(elem) {
+        if($(elem).val()==''){
+            $(elem).next().hide();
+        }
+    }
+
+    /*验证码60s倒计时*/
+    function countTime(elem) {
+        //发送成功弹出
+        $('.pop').text('已向'+182+'****'+8234+'发送验证码!');
+        $('.pop').fadeIn();
+        setTimeout(function () {
+            $('.pop').fadeOut();
+        },1000)
+        var t = 60;
+        var continer=$(elem).next();
+        $(elem).hide();
+        continer.show();
+        continer.text( t + 's');
+        var timer = setInterval(function () {
+            t -= 1;
+            continer.text( t + 's');
+            if (t <= 0) {
+                clearInterval(timer);
+                $(elem).show();
+                continer.hide();
+                return;
+            }
+        }, 1000);
+    }
+
+</script>
